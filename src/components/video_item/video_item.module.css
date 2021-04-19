@@ -1,0 +1,39 @@
+.container {
+  width: 50%;
+  /*box-sizing: border-box; */ /* width 50%를 하더라도 border 1px 때문에 50%가 넘는다 따라서 한줄에 두개가 표현 안되지만 border-sizing의 계산 값을 border-box(테두리를 기준으로 크기 정함)으로 설정한다면 먹힘! --> 이건 전체적으로 먹히게 하려고 index.css에 옮김 참고(https://www.codingfactory.net/10630)*/
+  padding: 0.2em;
+}
+
+.video {
+  /* 한줄에 다 나오기 위함! */
+  display: flex;
+  align-items: center;
+  border: 1px solid lightgray;
+  cursor: pointer;
+  transition: transform 250ms ease-in;
+  width: 100%;
+  height: 100%;
+  box-shadow: 7px 5px 14px -3px rgba(0, 0, 0, 0.38);
+}
+
+.video:hover {
+  transform: scale(1.02);
+}
+.thumbnail {
+  width: 40%;
+  height: 100%;
+}
+
+.metadata {
+  margin-left: 0.2em;
+}
+
+.title,
+.channel {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.channel {
+  font-size: 0.6rem;
+}
