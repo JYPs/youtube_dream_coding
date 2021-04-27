@@ -4,6 +4,14 @@
   padding: 0.2em;
 }
 
+.container.grid {
+  width: 50%;
+}
+
+.container.list {
+  width: 100%;
+}
+
 .video {
   /* 한줄에 다 나오기 위함! */
   display: flex;

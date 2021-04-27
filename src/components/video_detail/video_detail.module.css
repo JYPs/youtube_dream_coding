@@ -1,0 +1,10 @@
+.detail {
+  padding: 0.2em;
+}
+
+.description {
+  /* pre 태그의 문제 : 계속 텍스트가 연결되어 있으면 원래 공간을 넘어 가서 사이즈가 계속 길어짐
+        pre-wrap으로 해결 가능
+    */
+  white-space: pre-wrap;
+}
