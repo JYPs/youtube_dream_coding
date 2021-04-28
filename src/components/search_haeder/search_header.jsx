@@ -1,7 +1,8 @@
 import styles from "./search_header.module.css";
-import React, { useRef } from "react";
+import React, { memo, useRef } from "react";
 
-const SearchHeader = ({ onSearch }) => {
+// memo : 전달되는 props이 바뀌면 리-랜더링 된다. 지금 실행해보면 memo를 썼음에도 리랜더링 되고 있는데 이것은 props이 바뀌었다는 의미!
+const SearchHeader = memo(({ onSearch }) => {
   const inputRef = useRef();
   const handleSearch = () => {
     const value = inputRef.current.value;
@@ -17,6 +18,7 @@ const SearchHeader = ({ onSearch }) => {
       handleSearch();
     }
   };
+  console.log("header!!!!!!!!!!");
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -40,6 +42,6 @@ const SearchHeader = ({ onSearch }) => {
       </button>
     </header>
   );
-};
+});
 
 export default SearchHeader;
