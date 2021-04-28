@@ -4,9 +4,16 @@ import './index.css';
 import App from './app';
 import '@fortawesome/fontawesome-free/js/all.js';
 import Youtube from './service/youtube';
+import axios from 'axios';
 
 // env에 넣어둠 -> (AIzaSyBJFnCjQwb1_TDPEgkFK7D4CcRzrS1G0g4), env 파일에 관한건 여기 참고 --> https://create-react-app.dev/docs/adding-custom-environment-variables
-const youtube = new Youtube(process.env.REACT_APP_YOUTUBE_API_KEY);
+// const youtube = new Youtube(process.env.REACT_APP_YOUTUBE_API_KEY);
+
+const httpClient = axios.create({
+  baseURL: 'https://www.googleapis.com/youtube/v3',
+  params: {key: process.env.REACT_APP_YOUTUBE_API_KEY},
+});
+const youtube = new Youtube(httpClient);
 ReactDOM.render(
   // React.StrictMode = 자바스크립트의 'use strict' 와 동일, 엄격!!!!!!!, 배포시에는 활성화 되지 않아서 console에 오류가 안나옴~
   <React.StrictMode>

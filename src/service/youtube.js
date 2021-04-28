@@ -1,11 +1,17 @@
-import axios from 'axios';
+// import axios from 'axios';
 
 class Youtube {
+    /* Old version
     constructor(key) {
       this.youtube = axios.create({
         baseURL: 'https://www.googleapis.com/youtube/v3',
         params: {key: key},
       });
+    } */
+
+    // New version : DI를 좀더 깔끔하게 하는 방법임 index.js에서 DI를 받으면 됨
+    constructor(httpClient) {
+      this.youtube = httpClient;
     }
 
     // async로 변경한 예제
