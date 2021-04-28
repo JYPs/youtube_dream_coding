@@ -16,7 +16,10 @@ function App({ youtube }) {
     youtube //
       .search(query)
       // .then(console.log)
-      .then((videos) => setVideos(videos));
+      .then((videos) => {
+        setVideos(videos);
+        setSelectedVideo(null);
+      });
   };
 
   useEffect(() => {
