@@ -21,7 +21,7 @@ const SearchHeader = memo(({ onSearch }) => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <img className={styles.img} src="/images/logo.png" alt="logo" />
+        <img className={styles.img} src="./images/logo.png" alt="logo" />
         <h1 className={styles.title}>Yotube</h1>
       </div>
       <input
@@ -35,7 +35,7 @@ const SearchHeader = memo(({ onSearch }) => {
         {/* 내 습관은 (e) => this.onClick(e) event를 함수로 넘겨줘서 그걸 받아서 e.key를 찾았을텐데 이렇게도 되는구나!!! */}
         <img
           className={styles.buttonImg}
-          src="/images/search.png"
+          src="./images/search.png"
           alt="search"
         />
       </button>
